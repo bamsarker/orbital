@@ -1,0 +1,73 @@
+body {
+    background: #444;
+    font-family: monospace;
+    display: flex;
+    flex-direction: column;
+}
+
+canvas {
+    background: #111;
+    margin: auto;
+    image-rendering: pixelated;
+}
+
+#header {
+    margin: auto;
+    padding-bottom: 0.5rem;
+}
+
+div {
+    margin: auto;
+}
+
+input, button {
+    font-family: monospace;
+}
+label {
+    padding-bottom: 0.1rem;
+}
+
+.field {
+    display: flex;
+    flex-flow: column-reverse;
+    padding-bottom: 0.5rem;
+}
+input {
+    border: 0;
+    border-bottom: 1px solid #ccc;
+    padding: 0.1rem;
+    text-align: right;
+}
+
+#controls {
+    padding-top: 1rem;
+}
+
+#reload {
+    margin-top: 0.5rem;
+}
+
+button {
+    background: #d4d4d4;
+    background-image: -webkit-linear-gradient(top, #d4d4d4, #adadad);
+    background-image: -moz-linear-gradient(top, #d4d4d4, #adadad);
+    background-image: -ms-linear-gradient(top, #d4d4d4, #adadad);
+    background-image: -o-linear-gradient(top, #d4d4d4, #adadad);
+    background-image: linear-gradient(to bottom, #d4d4d4, #adadad);
+    color: #242424;
+    font-size: 1rem;
+    padding: 0.25rem 0.5rem;
+    text-decoration: none;
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover {
+    background: #e8e8e8;
+    background-image: -webkit-linear-gradient(top, #e8e8e8, #c9c9c9);
+    background-image: -moz-linear-gradient(top, #e8e8e8, #c9c9c9);
+    background-image: -ms-linear-gradient(top, #e8e8e8, #c9c9c9);
+    background-image: -o-linear-gradient(top, #e8e8e8, #c9c9c9);
+    background-image: linear-gradient(to bottom, #e8e8e8, #c9c9c9);
+    text-decoration: none;
+}
