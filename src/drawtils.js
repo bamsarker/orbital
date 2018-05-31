@@ -41,7 +41,10 @@ export const drawRedRect = (x, y, w, h) => {
 export const drawGreyRect = (x, y, w, h) => {
     return drawRect(fillStyles.grey, x, y, w, h)
 }
-export const randomPosition = () => {
+export const randomBattlePosition = () => {
+    return { x: randomBetween(-ctx.canvas.width, ctx.canvas.width * 2), y: randomBetween(-ctx.canvas.height, ctx.canvas.height * 2) }
+}
+export const randomCanvasPosition = () => {
     return { x: randomBetween(0, ctx.canvas.width), y: randomBetween(0, ctx.canvas.height) }
 }
 export const centerPosition = () => {

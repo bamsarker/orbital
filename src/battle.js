@@ -1,11 +1,10 @@
-import { randomPosition, beginPath, drawCurve, stroke } from './drawtils.js'
+import { randomBattlePosition, beginPath, drawCurve, stroke } from './drawtils.js'
 import { times, sample, shuffleArray } from './utils.js'
 import Ship from './ship.js'
 
 class Battle {
     constructor(numberOfShips, battleOptions, shipOptions) {
-        this.ships = times(numberOfShips, () => (new Ship(randomPosition(), shipOptions)))
-        console.log(battleOptions)
+        this.ships = times(numberOfShips, () => (new Ship(randomBattlePosition(), shipOptions)))
         this.shipReTargetChance = battleOptions.shipReTargetChance == undefined ? (numberOfShips * (20 / 100))  / numberOfShips / 60 : battleOptions.shipReTargetChance;
         beginPath();
     }
