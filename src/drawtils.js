@@ -3,8 +3,8 @@ import { modulo, randomBetween, distance, forFrames } from './utils.js'
 let ctx;
 
 export const drawRect = (fillStyle, x, y, w, h) => {
-    x = modulo(x, 256)
-    y = modulo(y, 256)
+    x = modulo(x, width())
+    y = modulo(y, height())
     ctx.fillStyle = fillStyle;
     ctx.fillRect(x, y, w, h);
 }
@@ -49,15 +49,15 @@ export const centerPosition = () => {
 }
 export const drawLine = (from, to) => {
     ctx.beginPath()
-    ctx.moveTo(modulo(from.x, 256), modulo(from.y, 256));
+    ctx.moveTo(modulo(from.x, width()), modulo(from.y, height()));
     ctx.strokeStyle = fillStyles.white;
-    ctx.lineTo(modulo(to.x, 256), modulo(to.y, 256));
+    ctx.lineTo(modulo(to.x, width()), modulo(to.y, height()));
     ctx.stroke();
 }
 export const drawCurve = (points) => {
     return;
 
-    let normalisedPoints = points.map((point) => ({ x: modulo(point.x, 256), y: modulo(point.y, 256) }))
+    let normalisedPoints = points.map((point) => ({ x: modulo(point.x, width()), y: modulo(point.y, height()) }))
     ctx.moveTo((normalisedPoints[0].x), normalisedPoints[0].y);
 
     ctx.strokeStyle = fillStyles.grey;
