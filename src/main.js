@@ -3,7 +3,7 @@ import { scaleCanvas, getNumberById, onClick } from './domtils.js'
 import Battle from './battle.js'
 
 const canvas = document.getElementById('canvas')
-scaleCanvas(canvas, 256, 256, 2);
+scaleCanvas(canvas, 512, 512, 1);
 setContext(canvas.getContext('2d'));
 
 const getShipParams = () => {
