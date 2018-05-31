@@ -46,7 +46,6 @@ class Battle {
     }
 
     updateShips() {
-        //this.ships = this.ships.filter((s) => (!s.killed))
         shuffleArray(this.ships)
         this.updateTargets();
         this.ships.map((ship) => (ship.update()))
