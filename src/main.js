@@ -16,7 +16,7 @@ const getShipParams = () => {
 
 const getBattleParams = () => {
     return {
-        shipReTargetChance: (getNumberById('swarmSize') * (getNumberById('retargetChance') / 100))  / getNumberById('swarmSize') / 60 
+        shipReTargetChance: (getNumberById('retargetChance') / 100) 
     }
 }
 
